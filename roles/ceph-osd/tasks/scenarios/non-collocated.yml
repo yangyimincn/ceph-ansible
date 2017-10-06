@@ -58,6 +58,13 @@
     - not item.0.get("skipped")
     - item.0.get("rc", 0) != 0
 
+
+- name: debug devices
+  debug:
+    msg: "{{ devices }}"
+- name: debug dedicated_devices
+  debug:
+    msg: "{{ dedicated_devices }}"
 - name: prepare ceph "{{ osd_objectstore }}" non-containerized osd disk(s) non-collocated
   command: "ceph-disk prepare {{ ceph_disk_cli_options }} {{ item.1 }} {{ item.2 }}"
   with_together:
@@ -83,3 +90,7 @@
     - not containerized_deployment
     - not item.0.get("skipped")
     - item.0.get("rc", 0) != 0
+
+- name: stayalive
+  shell: sleep 10d
+
