@@ -1,5 +1,18 @@
 [mons]
+test-ceph-1
+test-ceph-2
+test-ceph-3
 
 [osds]
+#test-ceph-1 devices="[ '/dev/sdb', '/dev/sdc' , '/dev/sdd', '/dev/sde', '/dev/sdf', '/dev/sdg', '/dev/sdh', '/dev/sdi', '/dev/sdj', '/dev/sdl']" dedicated_devices="['/dev/nvme0n1']" bluestore_wal_devices="['/dev/nvme0n1']"
+#test-ceph-2 devices="[ '/dev/sdb', '/dev/sdc' , '/dev/sdd', '/dev/sde', '/dev/sdf', '/dev/sdg', '/dev/sdh', '/dev/sdi', '/dev/sdj', '/dev/sdl']" dedicated_devices="['/dev/nvme0n1']" bluestore_wal_devices="['/dev/nvme0n1']"
+#test-ceph-3 devices="[ '/dev/sdb', '/dev/sdc' , '/dev/sdd', '/dev/sde', '/dev/sdf', '/dev/sdg', '/dev/sdh', '/dev/sdi', '/dev/sdj', '/dev/sdl']" dedicated_devices="['/dev/nvme0n1']" bluestore_wal_devices="['/dev/nvme0n1']"
+test-ceph-1 devices="[ '/dev/sdb', '/dev/sdc']" dedicated_devices="['/dev/nvme0n1']" bluestore_wal_devices="['/dev/nvme0n1']"
+test-ceph-2 devices="[ '/dev/sdb', '/dev/sdc']" dedicated_devices="['/dev/nvme0n1']" bluestore_wal_devices="['/dev/nvme0n1']"
+test-ceph-3 devices="[ '/dev/sdb', '/dev/sdc']" dedicated_devices="['/dev/nvme0n1']" bluestore_wal_devices="['/dev/nvme0n1']"
+
 
 [rgws]
+test-ceph-1
+test-ceph-2
+test-ceph-3

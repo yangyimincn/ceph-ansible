@@ -147,7 +147,7 @@ ceph_repository: community
 #ceph_stable_release: dummy
 #ceph_stable_repo: "{{ ceph_mirror }}/debian-{{ ceph_stable_release }}"
 ceph_mirror: http://mirrors.163.com/ceph
-ceph_stable_release: jewel
+ceph_stable_release: luminous
 ceph_stable_repo: "{{ ceph_mirror }}/rpm-{{ ceph_stable_release }}"
 ceph_stable_key: http://mirrors.163.com/ceph/keys/release.asc
 
@@ -338,7 +338,6 @@ monitor_interface: bond0
 #osd_objectstore: filestore
 public_network: 0.0.0.0/0
 cluster_network: 0.0.0.0/0
-journal_size: 20480
 
 # xattrs. by default, 'filestore xattr use omap' is set to 'true' if
 # 'osd_mkfs_type' is set to 'ext4'; otherwise it isn't set. This can
@@ -466,15 +465,14 @@ ceph_conf_overrides:
       osd_pool_default_size: 3
       osd_pool_default_min_size: 0
       osd_recovery_max_active: 1
-      osd_max_backfills: 1
+      osd_max_backfills: 5
       osd_deep_scrub_interval: 3628800
    osd:
       osd_scrub_begin_hour: 0
       osd_scrub_end_hour: 7
-      filestore_op_threads: 32
-      filestore_split_multiple: 3
-      filestore_merge_threshold: -20
       osd_max_scrubs: 1
+      bluestore_block_db_size: 107374182400
+      bluestore_block_wal_size: 10737418240
 
 
 #############

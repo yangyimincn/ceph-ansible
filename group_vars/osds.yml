@@ -121,12 +121,12 @@ dummy:
 #  - collocated
 #  - non-collocated
 #  - lvm
-osd_scenario: collocated
-osd_objectstore: filestore
-devices:
-  - /dev/sdb
-  - /dev/sdc
-  - /dev/sdd
+osd_scenario: non-collocated
+osd_objectstore: bluestore
+#devices:
+#  - /dev/sdb
+#  - /dev/sdc
+#  - /dev/sdd
 
 
 # II.  Second scenario: non-collocated
