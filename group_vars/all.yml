@@ -149,6 +149,7 @@ ceph_repository: community
 ceph_mirror: http://mirrors.163.com/ceph
 ceph_stable_release: jewel
 ceph_stable_repo: "{{ ceph_mirror }}/rpm-{{ ceph_stable_release }}"
+ceph_stable_key: http://mirrors.163.com/ceph/keys/release.asc
 
 #nfs_ganesha_stable: true # use stable repos for nfs-ganesha
 #nfs_ganesha_stable_branch: V2.5-stable
