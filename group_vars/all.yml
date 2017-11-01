@@ -336,7 +336,7 @@ monitor_interface: bond0
 #osd_mount_options_xfs: noatime,largeio,inode64,swalloc
 #osd_objectstore: filestore
 public_network: 0.0.0.0/0
-cluster_network: "{{ public_network }}"
+cluster_network: 0.0.0.0/0
 journal_size: 20480
 
 # xattrs. by default, 'filestore xattr use omap' is set to 'true' if
